@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | THRIFT IT</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Layout base */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: rgb(236, 244, 244);
+    }
+
+    header.header-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: brown;
+      color: beige;
+      box-shadow: 0 4px 6px rgb(12, 73, 73);
+      border-bottom: 5px solid white;
+      border-radius: 5px;
+      height: 120px; /* fixed height */
+      flex-shrink: 0;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-title img {
+      height: 80px;
+      width: 80px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: beige;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: whitesmoke;
+    }
+
+    /* Role section fills space between header and footer */
+    .role-section {
+      background: linear-gradient(135deg, brown, beige);
+      color: white;
+      min-height: calc(100vh - 120px - 60px); /* viewport height minus header and footer */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .role-section h2 {
+      font-size: 2.5rem;
+    }
+
+    .role-section span {
+      color: saddlebrown;
+    }
+
+    .select-role {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .role-box {
+      background: beige;
+      color: brown;
+      padding: 40px 60px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: 3px solid brown;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .role-box:hover {
+      background: #e6d4c3;
+      transform: translateY(-5px);
+    }
+
+    footer {
+      flex-shrink: 0;
+      height: 60px; /* fixed footer height */
+      line-height: 60px;
+      text-align: center;
+      padding: 0 20px;
+      background: brown;
+      color: white;
+      font-size: 1rem;
+    }
+
+    footer a {
+      color: beige;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #ecf0f1;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .role-box {
+        padding: 30px 40px;
+        font-size: 1.3rem;
+      }
+      header.header-box {
+        height: auto;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+      }
+      .logo-title img {
+        height: 60px;
+        width: 60px;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-box">
+    <div class="logo-title">
+      <img src="./logo.png" alt="Logo" />
+      <h1>THRIFT IT</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero role-section">
+    <h2>Choose Your Role to <span>Register</span></h2>
+
+    <div class="select-role">
+      <a href="register_buyer.html" class="role-box">Register as Buyer</a>
+      <a href="register_seller.html" class="role-box">Register as Seller</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <a href="#">@Twitter</a> |
+      <a href="#">@Facebook</a> |
+      <a href="#">@Instagram</a>
+    </p>
+  </footer>
+</body>
+</html>
